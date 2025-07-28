@@ -11,11 +11,11 @@ function Home({ setUser }) {
   }
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '100px' }}>
-      <h1>Bienvenido, {user?.name}</h1>
+    <div className='login'>
+      <h1 className='bienvenido'>Bienvenido, {user?.name}</h1>
       <img src={user?.picture} alt="Profile" style={{ borderRadius: '50%' }} />
       <br /><br />
-      <button onClick={logout}>Cerrar sesión</button>
+      <button className='logout' onClick={logout}>Cerrar sesión</button>
     </div>
   )
 }

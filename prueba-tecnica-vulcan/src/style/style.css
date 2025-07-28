@@ -1,0 +1,49 @@
+body {
+    min-width: 320px;
+    text-align: center;
+    background-color: lightgray;
+    background-image: radial-gradient(white 10%, transparent 11%);
+    background-size: 10px 10px;
+  }
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    height: 100vh;
+}
+
+.inicio_google {
+    width: 50%;
+    height: 5rem;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inicia{
+    font-size: 2rem;
+    color: #333;
+    margin-top: 20px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.bienvenido {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 20px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.logout {   
+    width: 10rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
