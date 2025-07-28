@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import Login from './pages/Login'
+import Home from './pages/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const user = localStorage.getItem('user')
 
   return (
-    <>
-      <div>
-        <a>asd</a>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={user ? <Navigate to="/home" /> : <Login />} />
+        <Route path="/home" element={user ? <Home /> : <Navigate to="/" />} />
+      </Routes>
+    </Router>
   )
 }
 
