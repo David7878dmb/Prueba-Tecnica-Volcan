@@ -1,10 +1,10 @@
 import GoogleLoginButton from '../components/GoogleLoginButton'
 
-function Login() {
+function Login({ setUser }) {
   return (
     <div style={{ textAlign: 'center', marginTop: '100px' }}>
       <h1>Inicia sesión con Google</h1>
-      <GoogleLoginButton />
+      <GoogleLoginButton setUser={setUser} />
     </div>
   )
 }

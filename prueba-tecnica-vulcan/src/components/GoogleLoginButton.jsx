@@ -2,17 +2,18 @@ import { GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 import { useNavigate } from 'react-router-dom'
 
-function GoogleLoginButton() {
+function GoogleLoginButton({ setUser }) {
   const navigate = useNavigate()
 
   const handleSuccess = (credentialResponse) => {
     const decoded = jwtDecode(credentialResponse.credential)
     localStorage.setItem('user', JSON.stringify(decoded))
+    setUser(decoded)
     navigate('/home')
   }
 
   const handleError = () => {
-    alert('Login con Google falló. Intenta de nuevo.')
+    alert('Login con Google falló.')
   }
 
   return (

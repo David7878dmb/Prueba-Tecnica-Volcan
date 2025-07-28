@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom'
 
-function Home() {
+function Home({ setUser }) {
   const navigate = useNavigate()
   const user = JSON.parse(localStorage.getItem('user'))
 
   const logout = () => {
     localStorage.removeItem('user')
+    setUser(null)
     navigate('/')
   }
 
