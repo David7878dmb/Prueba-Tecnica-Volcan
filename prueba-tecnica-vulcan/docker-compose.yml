@@ -1,0 +1,10 @@
+services:
+  prodigiosovolcan:
+    container_name: prodigiosovolcan
+    build: .
+    ports:
+      - "9778:9778"
+    env_file:
+      - .env
+    environment:
+      - VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID}
