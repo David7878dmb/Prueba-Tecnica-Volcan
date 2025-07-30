@@ -1,4 +1,4 @@
-# Prueba Tecnica Prodigioso Volcán 🔐🌋
+# Prueba Tecnica Prodigioso Volcán 
 
 ---
 
